@@ -1,7 +1,10 @@
-# pragma once
+#pragma once
 
 # include <iostream>
 # include <string>
+# include <map>
+# include "ASpell.hpp"
+# include "ATarget.hpp"
 
 class Warlock
 {
@@ -10,21 +13,20 @@ class Warlock
         // ATTRIBUTES
         std::string         _name;
         std::string         _title;
+        std::map<std::string, ASpell*>  _spellList;
 
         // DEFAULT CONSTRUCTOR
                             Warlock();
-        
         // COPY CONSTRUCTOR
-                            Warlock(Warlock const & src);
-
+                            Warlock(Warlock const &other);
         // ASSIGNMENT OPERATOR OVERLOAD
-        Warlock&            operator=(Warlock const & src);
+        Warlock&            operator=(Warlock const &other);
+
 
     public:
 
         // CONSTRUCTOR
                             Warlock(std::string const & name, std::string const & title);
-
         // DESTRUCTOR
                             ~Warlock();
 
@@ -35,6 +37,9 @@ class Warlock
         // SETTER
         void                setTitle(std::string const & title);
 
-        // METHOD
+        // METHODS
         void                introduce() const;
+        void                learnSpell(ASpell *spellPtr);
+        void                forgetSpell(std::string spellName);
+        void                launchSpell(std::string spellName, ATarget const & targetRef);
 };
