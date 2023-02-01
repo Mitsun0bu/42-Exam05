@@ -17,6 +17,7 @@ ATarget::ATarget(std::string const & type)
 ATarget::ATarget(ATarget const & src)
 {
     *this = src;
+    return ;
 }
 
 // ASSIGNMENT OPERATOR OVERLOAD

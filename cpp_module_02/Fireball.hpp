@@ -2,15 +2,15 @@
 
 #include "ASpell.hpp"
 
-class Fwoosh: public ASpell
+class Fireball: public ASpell
 {
     public:
 
         // DEFAULT CONSTRUCTOR
-        Fwoosh();
+        Fireball();
 
         // DESTRUCTOR
-        ~Fwoosh();
+        ~Fireball();
 
         // METHOD
         virtual ASpell* clone() const;
