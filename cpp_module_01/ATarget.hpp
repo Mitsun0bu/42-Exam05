@@ -21,10 +21,10 @@ class ATarget
                             ATarget(std::string const & type);
 
         // COPY CONSTRUCTOR
-                            ATarget(ATarget const & other);
+                            ATarget(ATarget const & src);
 
         // ASSIGNMENT OPERATOR OVERLOAD
-        ATarget&            operator=(ATarget const & other);
+        ATarget&            operator=(ATarget const & src);
 
         // DESTRUCTOR
         virtual             ~ATarget();
