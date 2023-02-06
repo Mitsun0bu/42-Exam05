@@ -49,7 +49,7 @@ void Warlock::learnSpell(ASpell* spellPtr)
 
 void Warlock::forgetSpell(std::string spellName)
 {
-    _spellBook.forgetSpell(spellPtr);
+    _spellBook.forgetSpell(spellName);
 }
 
 void Warlock::launchSpell(std::string spellName, ATarget const & targetRef)

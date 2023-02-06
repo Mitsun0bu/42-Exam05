@@ -8,7 +8,7 @@ ASpell::ASpell()
 
 // CONSTRUCTOR
 ASpell::ASpell(std::string const & name, std::string const & effects)
-    : _name(name), _effects(effects);
+    : _name(name), _effects(effects)
 {
     return ;
 }
