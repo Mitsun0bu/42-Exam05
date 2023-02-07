@@ -10,25 +10,25 @@ class ASpell
 	private:
 		
 		// ATTRIBUTE
-		std::string		_name;
-		std::string		_effects;
+		std::string			_name;
+		std::string			_effects;
 
 	public:
 
 		// DEFAULT CONSTRUCTOR
-					ASpell();
+							ASpell();
 
 		// CONSTRUCTOR
-					ASpell(std::string const & name, std::string const & effects);
+							ASpell(std::string const & name, std::string const & effects);
 
 		// COPY CONSTRUCTOR
-					ASpell(ASpell const & src);
+							ASpell(ASpell const & src);
 		
 		// ASSIGNMENT OPERATOR OVERLOAD
-		ASpell&			operator=(ASpell const & src);
+		ASpell&				operator=(ASpell const & src);
 	
 		// DESTRUCTOR
-		virtual			~ASpell();
+		virtual				~ASpell();
 
 		// GETTERS
 		std::string const &	getName() const;
@@ -36,5 +36,5 @@ class ASpell
 
 		// METHOD
 		virtual ASpell*		clone() const = 0;
-		void			launch(ATarget const & targetRef) const;
+		void				launch(ATarget const & targetRef) const;
 };

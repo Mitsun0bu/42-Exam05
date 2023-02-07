@@ -13,6 +13,15 @@ Warlock::~Warlock()
 {
 	std::cout	<< _name
 			<< ": My job here is done!\n";
+
+	std::map<std::string, ASpell *>::iterator head  = _spellList.begin();
+    std::map<std::string, ASpell *>::iterator tail  = _spellList.end();
+    while (head != tail)
+    {
+        delete (head->second);
+        ++head;
+    }
+    _spellList.clear();
 }
 
 // GETTERS
@@ -60,9 +69,6 @@ void Warlock::forgetSpell(std::string spellName)
 void Warlock::launchSpell(std::string spellName, ATarget const & targetRef)
 {
 	ASpell* spell = _spellList[spellName];
-	
 	if (spell)
 		spell->launch(targetRef);
 }
-
-

@@ -61,13 +61,13 @@ void Warlock::forgetSpell(std::string spellName)
 {
 	std::map<std::string, ASpell *>::iterator it = _spellList.find(spellName);
 	if (it != _spellList.end())
-		delete it->second;
+		delete (it->second);
 	_spellList.erase(spellName);
 }
 
 void Warlock::launchSpell(std::string spellName, ATarget const & targetRef)
 {
-	ASpell* spell = _spellList[spellName];
+	ASpell* spell = _spellList[spellName];=
 	if (spell)
 		spell->launch(targetRef);
 }

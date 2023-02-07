@@ -20,7 +20,7 @@ ATarget::ATarget(ATarget const & src)
 }
 
 // ASSIGNMENT OPERATOR OVERLOAD
-ATarget &ATarget::operator=(ATarget const & src)
+ATarget& ATarget::operator=(ATarget const & src)
 {
     _type = src._type;
     return (*this);

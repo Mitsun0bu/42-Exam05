@@ -20,7 +20,7 @@ ASpell::ASpell(ASpell const &src)
 }
 
 // ASSIGNMENT OPERATOR OVERLOAD
-ASpell &ASpell::operator=(ASpell const & src)
+ASpell& ASpell::operator=(ASpell const & src)
 {
     _name       = src._name;
     _effects    = src._effects;
@@ -47,5 +47,5 @@ std::string const & ASpell::getEffects() const
 // METHOD
 void ASpell::launch(ATarget const & targetRef) const
 {
-    targetRef.getHitBySpell((*this));
+    targetRef.getHitBySpell(*this);
 }
