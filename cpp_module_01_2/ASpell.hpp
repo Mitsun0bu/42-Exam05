@@ -1,6 +1,9 @@
 # pragma once
 
 # include <iostream>
+# include "ATarget.hpp"
+
+class ATarget;
 
 class ASpell
 {
@@ -25,7 +28,7 @@ class ASpell
 		ASpell&			operator=(ASpell const & src);
 	
 		// DESTRUCTOR
-					~ASpell();
+		virtual			~ASpell();
 
 		// GETTERS
 		std::string const &	getName() const;

@@ -1,6 +1,9 @@
 # pragma once
 
 # include <iostream>
+# include <map>
+# include "ASpell.hpp"
+# include "ATarget.hpp"
 
 class Warlock
 {

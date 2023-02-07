@@ -20,9 +20,9 @@ ATarget::ATarget(ATarget const & src)
 }
 
 // ASSIGNMENT OPERATOR OVERLOAD
-ATarget& operator=(ATarget const & src)
+ATarget& ATarget::operator=(ATarget const & src)
 {
-	_type = type;
+	_type = src._type;
 	return (*this);
 }
 
@@ -39,10 +39,10 @@ std::string const & ATarget::getType() const
 }
 
 // METHOD
-void getHitBySpell(ASpell const & spellRef) const
+void ATarget::getHitBySpell(ASpell const & spellRef) const
 {
 	std::cout	<< _type
 			<< " has been "
-			<< spellRef._effects
-			<< "!\n"
+			<< spellRef.getEffects()
+			<< "!\n";
 }
