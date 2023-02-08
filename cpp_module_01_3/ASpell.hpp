@@ -19,7 +19,7 @@ class ASpell
 							ASpell();
 
 		// CONSTRUCTOR
-							ASpell(std::string const & name, string const & effects);
+							ASpell(std::string const & name, std::string const & effects);
 
 		// COPY CONSTRUCTOR
 							ASpell(ASpell const & src);
