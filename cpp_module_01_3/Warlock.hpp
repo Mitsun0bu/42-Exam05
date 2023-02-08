@@ -10,14 +10,14 @@ class Warlock
 	private:
 		
 		// ATTRIBUTE
-		std::string	_name;
-		std::string	_title;
+		std::string			_name;
+		std::string			_title;
 		std::map<std::string, ASpell*>	_spellList;
-
+		
 	public:
-
+		
 		// CONSTRUCTOR
-					Warlock(std::string const & name, std::string const & title);
+							Warlock(std::string const & name, std::string const & title);
 		
 		// DESTRUCTOR
 							~Warlock();
@@ -28,8 +28,8 @@ class Warlock
 
 		// SETTER
 		void				setTitle(std::string const & title);
-		
-		// METHOD
+
+		// METHODS
 		void				introduce() const;
 		void				learnSpell(ASpell* spellPtr);
 		void				forgetSpell(std::string spellName);

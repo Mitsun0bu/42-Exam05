@@ -5,13 +5,13 @@
 
 class Dummy: public ATarget
 {
-	public:
+	public :
 
 		// DEFAULT CONSTRUCTOR
 							Dummy();
 
 		// DESTRUCTOR
-		virtual				~Dummy();
+		virtual             ~Dummy();
 
 		// METHOD
 		virtual ATarget*	clone() const;

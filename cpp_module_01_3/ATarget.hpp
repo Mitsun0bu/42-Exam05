@@ -1,7 +1,7 @@
-#pragma once
+# pragma once
 
-#include <iostream>
-#include "ASpell.hpp"
+# include <iostream>
+# include "ASpell.hpp"
 
 class ASpell;
 
@@ -13,7 +13,7 @@ class ATarget
 		std::string			_type;
 
 	public:
-		
+
 		// DEFAULT CONSTRUCTOR
 							ATarget();
 
@@ -24,15 +24,15 @@ class ATarget
 							ATarget(ATarget const & src);
 
 		// ASSIGNMENT OPERATOR OVERLOAD
-		ATarget&			operator=(ATarget const & src);					
+		ATarget&			operator=(ATarget const & src);
 
 		// DESTRUCTOR
-							~ATarget();
+		virtual				~ATarget();
 
 		// GETTER
 		std::string const &	getType() const;
 
-		// METHOD
+		// METHODS
+		virtual ATarget*	clone() const = 0;
 		void				getHitBySpell(ASpell const & spellRef) const;
-		virtual ATarget*	clone()	const = 0;
 };

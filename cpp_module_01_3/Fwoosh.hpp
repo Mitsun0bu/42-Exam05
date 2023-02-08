@@ -5,13 +5,13 @@
 
 class Fwoosh: public ASpell
 {
-	public:
+	public :
 
 		// DEFAULT CONSTRUCTOR
 							Fwoosh();
 
 		// DESTRUCTOR
-							~Fwoosh();
+		virtual             ~Fwoosh();
 
 		// METHOD
 		virtual ASpell*		clone() const;
