@@ -1,7 +1,7 @@
 #pragma once
 
-#include "ASpell.hpp"
 #include <map>
+#include "ASpell.hpp"
 
 class SpellBook
 {
@@ -14,7 +14,7 @@ class SpellBook
                     SpellBook(SpellBook const & src);
 
         // ASSIGNMENT OPERATOR OVERLOAD
-        SpellBook&  operator=(SpellBook const &src);
+        SpellBook&  operator=(SpellBook const & src);
 
     public:
 
@@ -28,5 +28,4 @@ class SpellBook
         void        learnSpell(ASpell* spellPtr);
         void        forgetSpell(std::string const & spellName);
         ASpell*     createSpell(std::string const & spellName);
-
 };

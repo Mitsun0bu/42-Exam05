@@ -1,7 +1,7 @@
-#pragma once
+# pragma once
 
-#include "ATarget.hpp"
-#include <map>
+# include <map>
+# include "ATarget.hpp"
 
 class TargetGenerator
 {
@@ -11,22 +11,21 @@ class TargetGenerator
         std::map<std::string, ATarget*> _targetList;
 
         // COPY CONSTRUCTOR
-                            TargetGenerator(TargetGenerator const & src);
+                                        TargetGenerator(TargetGenerator const & src);
 
         // ASSIGNMENT OPERATOR OVERLOAD
-        TargetGenerator&    operator=(TargetGenerator const & src);
+        TargetGenerator&                operator=(TargetGenerator const & src);
 
     public:
 
         // DEFAULT CONSTRUCTOR
-                            TargetGenerator();
+                                        TargetGenerator();
     
         // DESTRUCTOR
-                            ~TargetGenerator();
+                                        ~TargetGenerator();
 
         // METHODS
-        void                learnTargetType(ATarget* targetPtr);
-        void                forgetTargetType(std::string const & targetName);
-        ATarget*            createTarget(std::string const & targetName);
-
+        void                            learnTargetType(ATarget* targetPtr);
+        void                            forgetTargetType(std::string const & targetName);
+        ATarget*                        createTarget(std::string const & targetName);
 };

@@ -58,7 +58,7 @@ void Warlock::launchSpell(std::string spellName, ATarget const & targetRef)
     if (test == &targetRef)
         return ;
     
-    ASpell* temp = _spellBook.createSpell(spellName);
-    if (temp)
-        temp->launch(targetRef);
+    ASpell* spell = _spellBook.createSpell(spellName);
+    if (spell)
+        spell->launch(targetRef);
 }

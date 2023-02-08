@@ -9,16 +9,10 @@ TargetGenerator::TargetGenerator()
 // DESTRUCTOR
 TargetGenerator::~TargetGenerator()
 {
-    std::map<std::string, ATarget *>::iterator head = _targetList.begin();
-    std::map<std::string, ATarget *>::iterator tail = _targetList.end();
-    while (head != tail)
-    {
-        delete (head->second);
-        ++head;
-    }
-    _targetList.clear();
+    return ;
 }
 
+// METHODS
 void TargetGenerator::learnTargetType(ATarget* targetPtr)
 {
     if (targetPtr)

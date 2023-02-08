@@ -43,6 +43,6 @@ void ATarget::getHitBySpell(ASpell const & spellRef) const
 {
 	std::cout	<< _type
 			<< " has been "
-			<< spellRef.getEffects();
+			<< spellRef.getEffects()
 			<< "!\n";
 }

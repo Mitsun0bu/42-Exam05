@@ -19,6 +19,7 @@ SpellBook::~SpellBook()
     _spellList.clear();
 }
 
+// METHODS
 void SpellBook::learnSpell(ASpell* spellPtr)
 {
     if (spellPtr)

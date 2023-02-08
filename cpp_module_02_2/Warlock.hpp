@@ -11,9 +11,9 @@ class Warlock
     private:
 
         // ATTRIBUTES
-        std::string         		_name;
-        std::string         		_title;
-	SpellBook			_spellBook;
+        std::string         _name;
+        std::string         _title;
+	    SpellBook		    _spellBook;
         
 	// DEFAULT CONSTRUCTOR
                             Warlock();
@@ -33,15 +33,15 @@ class Warlock
                             ~Warlock();
 
         // GETTERS
-        std::string const & getName() const;
-        std::string const & getTitle() const;
+        std::string const &	getName() const;
+        std::string const &	getTitle() const;
 
         // SETTER
         void                setTitle(std::string const & title);
 
         // METHOD
-        void                introduce() const;
-	void			learnSpell(ASpell* spellPtr);
-	void			forgetSpell(std::string spellName);
-	void			launchSpell(std::string spellName, ATarget const & targetRef);
+        void			    introduce() const;
+	    void			    learnSpell(ASpell* spellPtr);
+	    void			    forgetSpell(std::string spellName);
+	    void			    launchSpell(std::string spellName, ATarget const & targetRef);
 };
