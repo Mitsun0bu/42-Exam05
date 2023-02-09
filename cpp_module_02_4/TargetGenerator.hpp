@@ -10,7 +10,7 @@ class TargetGenerator
 	private:
 	
 		// ATTRIBUTES
-		std::map<std::string, ASpell*>	_targetList;
+		std::map<std::string, ATarget*>	_targetList;
 
 		// COPY CONSTRUCTOR
 						TargetGenerator(TargetGenerator const & src);			

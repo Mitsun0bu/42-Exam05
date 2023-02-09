@@ -4,7 +4,7 @@
 # include <map>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
-# include "SPellBook.hpp"
+# include "SpellBook.hpp"
 
 class Warlock
 {

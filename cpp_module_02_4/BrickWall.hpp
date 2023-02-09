@@ -1,20 +1,18 @@
-# include "BrickWall.hpp"
+# pragma once
 
-// DEFAULT CONSTRUCTOR
-BrickWall::BrickWall()
-	: ATarget("Inconspicuous Red-brick Wall")
-{
-	return ;
-}	
+# include <iostream>
+# include "ATarget.hpp"
 
-// DESTRUCTOR
-BrickWall::~BrickWall()
+class BrickWall: public ATarget
 {
-	return ;
-}
+	public:
+		
+		// DEFAULT CONSTRUCTOR
+					BrickWall();		
 
-// METHOD
-ATarget* BrickWall::clone() const
-{
-	return (new BrickWall());
-}
+		// DESTRUCTOR
+		virtual		~BrickWall();
+
+		// METHOD
+		ATarget*	clone() const;
+};

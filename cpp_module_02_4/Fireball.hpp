@@ -3,7 +3,7 @@
 # include <iostream>
 # include "ASpell.hpp"
 
-class Fireball
+class Fireball: public ASpell
 {
 	public:
 		

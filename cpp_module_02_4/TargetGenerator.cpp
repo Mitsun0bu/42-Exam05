@@ -37,7 +37,7 @@ void TargetGenerator::forgetTargetType(std::string const & targetType)
 ATarget* TargetGenerator::createTarget(std::string const & targetType)
 {
 	std::map<std::string, ATarget*>::iterator	it = _targetList.find(targetType);
-	if (target)
+	if (it != _targetList.end())
 		return (_targetList[targetType]);
 	return (NULL);
 }

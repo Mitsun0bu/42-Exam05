@@ -37,7 +37,7 @@ void SpellBook::forgetSpell(std::string const & spellName)
 ASpell* SpellBook::createSpell(std::string const & spellName)
 {
 	std::map<std::string, ASpell*>::iterator	it = _spellList.find(spellName);
-	if (spell)
+	if (it != _spellList.end())
 		return (_spellList[spellName]);
 	return (NULL);
 }
