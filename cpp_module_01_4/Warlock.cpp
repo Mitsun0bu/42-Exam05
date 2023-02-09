@@ -52,13 +52,13 @@ void Warlock::introduce() const
 			<< "!\n"; 
 }
 
-void learnSpell(ASpell* spellPtr)
+void Warlock::learnSpell(ASpell* spellPtr)
 {
 	if (spellPtr)
-		_spellList.insert(std::pair<std::string, ASpell*>(spellPtr->getName, spellPtr->clone()));
+		_spellList.insert(std::pair<std::string, ASpell*>(spellPtr->getName(), spellPtr->clone()));
 }
 
-void forgetSpell(std::string spellName)
+void Warlock::forgetSpell(std::string spellName)
 {
 	std::map<std::string, ASpell*>::iterator	it = _spellList.find(spellName);
 	if (it != _spellList.end())
@@ -66,7 +66,7 @@ void forgetSpell(std::string spellName)
 	_spellList.erase(spellName);
 }
 
-void launchSpell(std::string spellName, ATarget const & targetRef)
+void Warlock::launchSpell(std::string spellName, ATarget const & targetRef)
 {
 	ASpell* spell = _spellList[spellName];
 	if (spell)
