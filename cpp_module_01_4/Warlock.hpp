@@ -15,10 +15,10 @@ class Warlock
 		std::map<std::string, ASpell*>	_spellList;
 
 		// DEFAULT CONSTRUCTOR
-						Warlock();		
+							Warlock();		
 
 		// COPY CONSTRUCTOR
-						Warlock(Warlock const & src);			
+							Warlock(Warlock const & src);			
 
 		// ASSIGNMENT OPERATOR OVERLOAD
 		Warlock&			operator=(Warlock const & src);
@@ -26,14 +26,14 @@ class Warlock
 	public:
 		
 		// CONSTRUCTOR
-						Warlock(std::string const & name, std::string const & title);
+							Warlock(std::string const & name, std::string const & title);
 
 		// DESTRUCTOR
-						~Warlock();
+							~Warlock();
 
 		// GETTERS
-		std::string const &		getName() const;
-		std::string const &		getTitle() const;
+		std::string const &	getName() const;
+		std::string const &	getTitle() const;
 
 		// SETTERS
 		void				setTitle(std::string const & title);

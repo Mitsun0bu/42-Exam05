@@ -10,29 +10,29 @@ class ATarget
 	private:
 	
 		// ATTRIBUTES
-		std::string		_type;
+		std::string			_type;
 
 	public:
 		
 		// DEFAULT CONSTRUCTOR
-					ATarget();		
+							ATarget();		
 
 		// CONSTRUCTOR
-					ATarget(std::string const & type);
+							ATarget(std::string const & type);
 		
 		// COPY CONSTRUCTOR
-					ATarget(ATarget const & src);			
+							ATarget(ATarget const & src);			
 
 		// ASSIGNMENT OPERATOR OVERLOAD
-		ATarget&		operator=(ATarget const & src);
+		ATarget&			operator=(ATarget const & src);
 
 		// DESTRUCTOR
-		virtual			~ATarget();
+		virtual				~ATarget();
 
 		// GETTERS
 		std::string const &	getType() const;
 
 		// METHOD
-		ATarget*		clone() const = 0;
-		void			getHitBySpell(ASpell const & spellRef) const;
+		virtual ATarget*	clone() const = 0;
+		void				getHitBySpell(ASpell const & spellRef) const;
 };

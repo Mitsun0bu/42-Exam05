@@ -29,6 +29,7 @@ std::string const & Warlock::getName() const
 {
     return (_name);
 }
+
 std::string const & Warlock::getTitle() const
 {
     return (_title);
@@ -67,7 +68,7 @@ void Warlock::forgetSpell(std::string spellName)
 
 void Warlock::launchSpell(std::string spellName, ATarget const & targetRef)
 {
-	ASpell* spell = _spellList[spellName];=
+	ASpell* spell = _spellList[spellName];
 	if (spell)
 		spell->launch(targetRef);
 }

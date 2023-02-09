@@ -3,7 +3,7 @@
 # include <iostream>
 # include "ATarget.hpp"
 
-class Dummy
+class Dummy: public ATarget
 {
 	public:
 		

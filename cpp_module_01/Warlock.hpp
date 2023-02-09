@@ -1,7 +1,6 @@
 #pragma once
 
 # include <iostream>
-# include <string>
 # include <map>
 # include "ASpell.hpp"
 # include "ATarget.hpp"
@@ -17,16 +16,18 @@ class Warlock
 
         // DEFAULT CONSTRUCTOR
                             Warlock();
+        
         // COPY CONSTRUCTOR
                             Warlock(Warlock const &other);
+        
         // ASSIGNMENT OPERATOR OVERLOAD
         Warlock&            operator=(Warlock const &other);
-
 
     public:
 
         // CONSTRUCTOR
                             Warlock(std::string const & name, std::string const & title);
+        
         // DESTRUCTOR
                             ~Warlock();
 
