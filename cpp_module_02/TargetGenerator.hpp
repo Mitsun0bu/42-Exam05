@@ -26,6 +26,6 @@ class TargetGenerator
 
         // METHODS
         void                            learnTargetType(ATarget* targetPtr);
-        void                            forgetTargetType(std::string const & targetName);
-        ATarget*                        createTarget(std::string const & targetName);
+        void                            forgetTargetType(std::string const & targetType);
+        ATarget*                        createTarget(std::string const & targetType);
 };

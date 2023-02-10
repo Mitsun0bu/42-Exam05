@@ -19,18 +19,18 @@ void TargetGenerator::learnTargetType(ATarget* targetPtr)
         _targetList.insert(std::pair<std::string, ATarget*>(targetPtr->getType(), targetPtr->clone()));
 }
 
-void TargetGenerator::forgetTargetType(std::string const & targetName)
+void TargetGenerator::forgetTargetType(std::string const & targetType)
 {
-    std::map<std::string, ATarget*>::iterator it = _targetList.find(targetName);
+    std::map<std::string, ATarget*>::iterator it = _targetList.find(targetType);
 	if (it != _targetList.end())
 		delete (it->second);
-    _targetList.erase(targetName);
+    _targetList.erase(targetType);
 }
 
-ATarget* TargetGenerator::createTarget(std::string const & targetName)
+ATarget* TargetGenerator::createTarget(std::string const & targetType)
 {
-    std::map<std::string, ATarget*>::iterator it = _targetList.find(targetName);
+    std::map<std::string, ATarget*>::iterator it = _targetList.find(targetType);
     if (it != _targetList.end())
-        return (_targetList[targetName]);
+        return (_targetList[targetType]);
     return (NULL);
 }
